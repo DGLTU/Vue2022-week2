@@ -15,7 +15,7 @@ const app = Vue.createApp({
                 .then((res) => {
                     const {token,expired} = res.data
                     document.cookie = `token=${token}; expires=${expired}; path=/`;
-                    window.location="/admin.html"
+                    window.location=" https://dgltu.github.io/vue2022-week2/admin.html"
                 })
                 .catch((err) => {
                     console.dir(err)
