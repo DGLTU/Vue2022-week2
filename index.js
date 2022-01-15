@@ -13,8 +13,9 @@ const app = Vue.createApp({
             if (this.checkForm()) return
             axios.post('https://vue3-course-api.hexschool.io/v2/admin/signin', this.data)
                 .then((res) => {
-                    console.log(res)
-                    window.location="https://dgltu.github.io/vue2022-week2/admin.html"
+                    const {token,expired} = res.data
+                    document.cookie = `token=${token}; expires=${expired}; path=/`;
+                    window.location="/admin.html"
                 })
                 .catch((err) => {
                     console.dir(err)
