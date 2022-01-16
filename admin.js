@@ -16,7 +16,7 @@ const app = Vue.createApp({
                 .catch((err)=>{
                     console.dir(err);
                     alert('請重新登入')
-                    window.location="/index.html"
+                    window.location="https://dgltu.github.io/vue2022-week2/admin.html"
                 })
         },
         getProduct(){
