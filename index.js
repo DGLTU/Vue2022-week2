@@ -20,7 +20,8 @@ const app = Vue.createApp({
                 .catch((err) => {
                     console.dir(err)
                     alert('你輸入的資訊有誤')
-                    window.location = "https://dgltu.github.io/vue2022-week2/404.html"
+                    this.username=""
+                    this.password=""
                 })
             document.querySelector("form").reset()
         },
