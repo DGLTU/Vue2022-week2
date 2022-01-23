@@ -29,8 +29,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <template v-for="item in product" :key="item.id" class="row">
+                    <template v-for="item in product" :key="item.id" class="row">
+                        <tr>
                             <td class="col-5">{{item.title}}</td>
                             <td>{{item.origin_price}}</td>
                             <td>{{item.price}}</td>
@@ -38,8 +38,8 @@
                             <td v-else class="col-1">未啟用</td>
                             <td><button type="button" class="btn btn-primary" @click="temp = item">查看細節</button></td>
                             <td><button type="button" :id="item.id" class="btn btn-outline-danger">刪除</button></td>
-                        </template>
-                    </tr>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
             <p>目前有 {{product.length}} 項產品</p>
@@ -52,7 +52,7 @@
                     <p>商品名稱 : {{temp.title}} <small>{{temp.category}}</small></p>
                     <p>商品描述 : {{temp.description}}</p>
                     <p>商品內容 : {{temp.content}}</p>
-                    <p>售價 : <del class="del">{{temp.origin_price}}</del>  <span>{{temp.price}}</span> / {{temp.unit}}</p>
+                    <p>售價 : <del class="del">{{temp.origin_price}}</del> <span>{{temp.price}}</span> / {{temp.unit}}</p>
                 </div>
             </div>
         </div>
